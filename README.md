@@ -48,3 +48,7 @@ https://blog.cloud-acct.com/posts/u-nuxtjs-layout-desings
 https://blog.cloud-acct.com/posts/u-nuxtjs-welcome-page-1
 💛nuxt3 で動的なレイアウト変更
 　https://tyotto-good.com/nuxtjs/layout
+💛typescript での data 型処理
+　https://js.excelspeedup.com/date#c-date%E5%9E%8B%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%96%87%E5%AD%97%E5%88%97%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B
+
+border-1 border-dotted border-pink-200 p-2
