@@ -36,3 +36,15 @@ yarn add -D @types/node
 
 yarn add primevue primeicons primeflex
 yarn add pinia @pinia/nuxt
+
+---
+
+https://github.com/teru-0529/nuxt-typescript
+
+nuxt での開発
+★Nuxt.js のレイアウト・ページ・コンポーネントの役割を理解しよう
+https://blog.cloud-acct.com/posts/u-nuxtjs-layout-desings
+★Nuxt.js ウェルカムページを構成するコンポーネントファイル群を作成しよう(1/4)
+https://blog.cloud-acct.com/posts/u-nuxtjs-welcome-page-1
+💛nuxt3 で動的なレイアウト変更
+　https://tyotto-good.com/nuxtjs/layout
