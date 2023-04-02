@@ -4,6 +4,7 @@ import appFooter from '@/components/base/footer.vue'
 import { useBaseStore } from '@/stores/base'
 
 const baseStore = useBaseStore()
+
 const version = computed((): string => {
   return baseStore.versionInfo
 })

@@ -6,10 +6,9 @@ import appFooter from '@/components/base/footer.vue'
 <template>
   <div>
     <app-header />
-    <!-- <div style="height: 560px"> -->
-    layoutLogin.vue
-    <slot />
-    <!-- </div> -->
+    <div class="bg-gray-50" style="height: 610px">
+      <slot />
+    </div>
     <app-footer />
   </div>
 </template>
