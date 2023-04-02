@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import appLogo from '@/components/login/appLogo.vue'
+import appLogo from '@/components/base/logo.vue'
 
 const onLoginClick = () => {
   return navigateTo({ path: '/login' })

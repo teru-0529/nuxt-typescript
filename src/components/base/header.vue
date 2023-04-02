@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import appLogo from '@/components/login/appLogo.vue'
+import logo from '@/components/base/logo.vue'
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import appLogo from '@/components/login/appLogo.vue'
     <div class="card">
       <div class="flex card-container overflow-hidden">
         <div class="flex-grow-1 flex">
-          <app-logo />
+          <logo />
         </div>
       </div>
     </div>
