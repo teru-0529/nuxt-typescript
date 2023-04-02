@@ -5,9 +5,10 @@ definePageMeta({
   layout: false,
 })
 
-const baseStore = useBaseStore()
-const layout: string = baseStore.baseLayout
-setPageLayout(baseStore.baseLayout)
+onMounted((): void => {
+  const baseStore = useBaseStore()
+  setPageLayout(baseStore.baseLayout)
+})
 </script>
 
 <template>
