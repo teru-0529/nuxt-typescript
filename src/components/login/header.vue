@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import appLogo from '@/components/login/appLogo.vue'
-
-const onLoginClick = () => {
-  return navigateTo({ path: '/login' })
-}
 </script>
 
 <template>
@@ -12,15 +8,6 @@ const onLoginClick = () => {
       <div class="flex card-container overflow-hidden">
         <div class="flex-grow-1 flex">
           <app-logo />
-        </div>
-        <div class="flex-none flex align-items-center mx-3">
-          <Button
-            label="ログイン"
-            severity="secondary"
-            size="large"
-            outlined
-            v-on:click="onLoginClick"
-          />
         </div>
       </div>
     </div>

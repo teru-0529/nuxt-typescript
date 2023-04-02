@@ -12,7 +12,7 @@ const version = computed((): string => {
 <template>
   <div>
     <app-header />
-    <div class="card bg" style="height: 470px">
+    <div class="card bg" style="height: 500px">
       <div class="flex flex-column card-container align-items-center justify-content-center">
         <div class="flex h-25rem m-2 p-8">
           <h1 class="text-8xl text-800">PHAROS</h1>

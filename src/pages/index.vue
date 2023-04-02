@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useBaseStore } from '@/stores/base'
 
-definePageMeta({
-  layout: false,
-})
-
 onMounted((): void => {
+  definePageMeta({
+    // layout: false,
+    layout: 'welcome',
+  })
   const baseStore = useBaseStore()
   setPageLayout(baseStore.baseLayout)
 })
