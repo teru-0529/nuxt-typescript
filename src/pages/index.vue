@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { useBaseStore } from '@/stores/base'
 
+const baseStore = useBaseStore()
+
 definePageMeta({
   layout: false,
 })
-
-onMounted((): void => {
-  const baseStore = useBaseStore()
-  setPageLayout(baseStore.baseLayout)
-})
+setPageLayout(baseStore.isLogin ? 'default' : 'welcome')
 </script>
 
 <template>

@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import appLogo from '@/components/login/appLogo.vue'
+import appLogo from '@/components/base/logo.vue'
 
-const onLoginClick = async () => {
-  console.log('おしたぜ！')
-  // await navigateTo({ path: '/login', replace: true })
+const onLoginClick = () => {
+  return navigateTo({ path: '/login' })
 }
 </script>
 
@@ -15,7 +14,6 @@ const onLoginClick = async () => {
           <app-logo />
         </div>
         <div class="flex-none flex align-items-center mx-3">
-          <!-- <NuxtLink to="/login">ログイン</NuxtLink> -->
           <Button
             label="ログイン"
             severity="secondary"
