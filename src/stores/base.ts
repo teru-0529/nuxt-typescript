@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { format } from 'date-fns/fp'
 
 interface State {
+  appLogo: string
   appName: string
   appVersion: string
   releaseDate: Date
@@ -13,9 +14,11 @@ export const useBaseStore = defineStore({
 
   state: (): State => {
     return {
+      appLogo: 'PH',
       appName: 'Pharos',
       appVersion: '0.9.0',
       releaseDate: new Date(2023, 3, 1),
+
       isLogin: false,
     }
   },

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import appHeader from '@/components/base/welcomeHeader.vue'
-import appFooter from '@/components/base/footer.vue'
+import appHeader from '@/components/organisms/base/welcomeHeader.vue'
+import appFooter from '@/components/organisms/base/footer.vue'
 import { useBaseStore } from '@/stores/base'
 
 const baseStore = useBaseStore()
