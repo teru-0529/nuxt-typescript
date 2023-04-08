@@ -24,7 +24,7 @@ export const useAccountStore = defineStore({
       this.name = name
       // TODO:ローカルストレージに書き込み
     },
-    prepareName(): void {
+    prepareAccount(): void {
       // TODO:ローカルストレージから取得
     },
   },
