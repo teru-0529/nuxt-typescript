@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import appLogo from '@/components/molecules/items/appLogo.vue'
-
+import configMenu from '@/components/organisms/card/config.vue'
 import { useBaseStore } from '@/stores/base'
 
 const baseStore = useBaseStore()
@@ -16,6 +16,12 @@ const baseStore = useBaseStore()
             v-bind:app-logo="baseStore.appLogo"
             v-bind:app-name="baseStore.appName"
           />
+        </div>
+        <div class="flex-none flex align-items-center mx-3">
+          <div class="text-primary-700 mx-3">
+            <p>{{ baseStore.versionInfo }}</p>
+          </div>
+          <configMenu />
         </div>
       </div>
     </div>

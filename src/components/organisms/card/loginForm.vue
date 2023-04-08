@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import formUserName from '@/components/molecules/forms/userName.vue'
 import { useBaseStore } from '@/stores/base'
 import { useAccountStore } from '@/stores/account'
-import formUserName from '@/components/molecules/forms/userName.vue'
 
 const baseStore = useBaseStore()
 const accountStore = useAccountStore()
@@ -11,8 +11,9 @@ const setUserNameError = (isError: boolean) => {
   isUserNameError.value = isError
 }
 
+// 複数の入力コンポーネントのいずれかがエラーの場合にtrue
 const hasErrors = computed((): boolean => {
-  return isUserNameError.value
+  return isUserNameError.value || false
 })
 
 const onLoginClick = () => {

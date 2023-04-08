@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import appLogo from '@/components/molecules/items/appLogo.vue'
-
 import { useBaseStore } from '@/stores/base'
 
 const baseStore = useBaseStore()

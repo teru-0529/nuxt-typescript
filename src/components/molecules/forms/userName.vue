@@ -4,7 +4,7 @@ import req from '@/components/molecules/items/required.vue'
 interface Props {
   userName: string
 }
-defineProps<Props>()
+const prop = defineProps<Props>()
 
 interface Emits {
   (event: 'update:user-name', userName: string): void
@@ -21,7 +21,6 @@ const errMessage = ref('')
 
 const onFocusIn = (): void => {
   errMessage.value = ''
-  console.log('フォーカスイン')
 }
 
 const validate = (event: Event): void => {
@@ -33,8 +32,6 @@ const validate = (event: Event): void => {
   } else {
     emit('setIsError', false)
   }
-  console.log(element.value)
-  console.log('フォーカスアウト')
 }
 </script>
 
