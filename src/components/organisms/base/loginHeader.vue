@@ -11,7 +11,11 @@ const baseStore = useBaseStore()
     <div class="card">
       <div class="flex card-container overflow-hidden">
         <div class="flex-grow-1 flex">
-          <app-logo v-bind:app-logo="baseStore.appLogo" v-bind:app-name="baseStore.appName" />
+          <app-logo
+            v-bind:is-logged-in="false"
+            v-bind:app-logo="baseStore.appLogo"
+            v-bind:app-name="baseStore.appName"
+          />
         </div>
       </div>
     </div>

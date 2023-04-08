@@ -6,7 +6,7 @@ const baseStore = useBaseStore()
 definePageMeta({
   layout: false,
 })
-setPageLayout(baseStore.isLogin ? 'default' : 'welcome')
+setPageLayout(baseStore.isLogin ? 'login' : 'welcome')
 </script>
 
 <template>
