@@ -2,7 +2,6 @@ import { defineStore } from 'pinia'
 
 interface State {
   name: string
-  address: string
 }
 
 export const useAccountStore = defineStore({
@@ -11,7 +10,6 @@ export const useAccountStore = defineStore({
   state: (): State => {
     return {
       name: '',
-      address: '',
     }
   },
 
@@ -24,10 +22,6 @@ export const useAccountStore = defineStore({
   actions: {
     setName(name: string): void {
       this.name = name
-      // TODO:ローカルストレージに書き込み
-    },
-    setAddress(address: string): void {
-      this.address = address
       // TODO:ローカルストレージに書き込み
     },
     prepareAccount(): void {

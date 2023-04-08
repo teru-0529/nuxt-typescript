@@ -2,17 +2,17 @@
 import { useBaseStore } from '@/stores/base'
 import { useAccountStore } from '@/stores/account'
 import formUserName from '@/components/molecules/forms/userName.vue'
-import formMailAddress from '@/components/molecules/forms/mailAddress.vue'
 
 const baseStore = useBaseStore()
 const accountStore = useAccountStore()
 
-const existName = computed((): boolean => {
-  return accountStore.existName
-})
+const isUserNameError = ref(true)
+const setUserNameError = (isError: boolean) => {
+  isUserNameError.value = isError
+}
 
-const aaa = computed((): string => {
-  return accountStore.name + ' - ' + accountStore.address
+const hasErrors = computed((): boolean => {
+  return isUserNameError.value
 })
 
 const onLoginClick = () => {
@@ -27,23 +27,13 @@ const onLoginClick = () => {
       <div>{{ baseStore.appName }}にログイン</div>
     </template>
     <template #content>
-      <form-user-name v-model:user-name="accountStore.name" />
-      <form-mail-address v-model:address="accountStore.address" />
+      <form-user-name v-model:user-name="accountStore.name" v-on:set-is-error="setUserNameError" />
       <div>
-        {{ aaa }}
-        <p>
-          ※ユーザー名を指定することで登録時の項目として利用します。<br />
-          一度登録するとユーザー名はブラウザのLocalstrageに保存され、次回以降は登録作業を挟むことなくログインすることができます。
-        </p>
+        <p>※指定した名称は項目登録時のユーザーとして利用します。</p>
       </div>
     </template>
     <template #footer>
-      <Button
-        icon="pi pi-check"
-        label="登録してログイン"
-        :disabled="existName"
-        v-on:click="onLoginClick"
-      />
+      <Button icon="pi pi-check" label="ログイン" :disabled="hasErrors" v-on:click="onLoginClick" />
     </template>
   </Card>
 </template>
