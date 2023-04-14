@@ -1,12 +1,11 @@
 import { defineStore } from 'pinia'
-import { format } from 'date-fns/fp'
 
 interface State {
   appLogo: string
   appName: string
-  appVersion: string
-  releaseDate: Date
   isLogin: boolean
+  activeContents: string
+  isConfigContents: boolean
 }
 
 export const useBaseStore = defineStore({
@@ -16,20 +15,14 @@ export const useBaseStore = defineStore({
     return {
       appLogo: 'PH',
       appName: 'Pharos',
-      appVersion: '0.9.0',
-      releaseDate: new Date(2023, 3, 1),
 
       isLogin: false,
+      activeContents: '',
+      isConfigContents: true,
     }
   },
 
-  getters: {
-    versionInfo: (state): string => {
-      const dayFormat = format('yyyy-MM-dd')
-      const releseDay = dayFormat(state.releaseDate)
-      return `version ${state.appVersion} (released ${releseDay})`
-    },
-  },
+  getters: {},
 
   actions: {
     login(): void {
@@ -37,6 +30,10 @@ export const useBaseStore = defineStore({
     },
     logout(): void {
       this.isLogin = false
+    },
+    setActiveContents(contentsName: string, isConfig: boolean): void {
+      this.activeContents = contentsName
+      this.isConfigContents = isConfig
     },
   },
 })

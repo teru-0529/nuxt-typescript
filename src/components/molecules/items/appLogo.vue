@@ -2,6 +2,7 @@
 interface Props {
   appLogo: string
   appName: string
+
   isLoggedIn: boolean
 }
 defineProps<Props>()
@@ -20,7 +21,8 @@ defineProps<Props>()
     <span
       class="text-3xl vertical-align-middle"
       v-bind:class="{ 'text-bluegray-600': !isLoggedIn, 'text-primary-700': isLoggedIn }"
-      >{{ appName }}</span
     >
+      {{ appName }}
+    </span>
   </div>
 </template>

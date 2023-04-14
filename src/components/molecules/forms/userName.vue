@@ -4,7 +4,7 @@ import req from '@/components/molecules/items/required.vue'
 interface Props {
   userName: string
 }
-const prop = defineProps<Props>()
+defineProps<Props>()
 
 interface Emits {
   (event: 'update:user-name', userName: string): void
@@ -14,7 +14,8 @@ const emit = defineEmits<Emits>()
 
 const onInput = (event: Event): void => {
   const element = event.target as HTMLInputElement
-  emit('update:user-name', element.value)
+  const value = element.value
+  emit('update:user-name', value)
 }
 
 const errMessage = ref('')
@@ -28,10 +29,10 @@ const validate = (event: Event): void => {
   const value = element.value
   if (value.length < 2) {
     errMessage.value = 'ユーザー名は2文字以上必要です。'
-    emit('setIsError', true)
   } else {
-    emit('setIsError', false)
+    errMessage.value = ''
   }
+  emit('setIsError', !!errMessage.value)
 }
 </script>
 

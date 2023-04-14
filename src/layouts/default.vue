@@ -6,8 +6,9 @@ import appFooter from '@/components/organisms/base/footer.vue'
 <template>
   <div>
     <app-header />
-    <div class="bg-primary-50" style="height: 610px">
+    <div class="bg-primary-50 overflow-y-scroll" style="height: 610px">
       <slot />
     </div>
+    <app-footer v-bind:is-logged-in="true" />
   </div>
 </template>

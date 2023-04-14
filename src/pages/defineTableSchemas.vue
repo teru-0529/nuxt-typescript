@@ -2,7 +2,7 @@
 import { useBaseStore } from '@/stores/base'
 
 const baseStore = useBaseStore()
-baseStore.setActiveContents('保存フォルダ編集', true)
+baseStore.setActiveContents('DDL定義', false)
 </script>
 
 <template>
