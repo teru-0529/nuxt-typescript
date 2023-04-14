@@ -2,9 +2,14 @@
 import formUserName from '@/components/molecules/forms/userName.vue'
 import { useBaseStore } from '@/stores/base'
 import { useAccountStore } from '@/stores/account'
+import appInfo from '@/assets/appInfo.json'
 
 const baseStore = useBaseStore()
 const accountStore = useAccountStore()
+
+const appName = computed(() => {
+  return appInfo.name
+})
 
 const isUserNameError = ref(true)
 const setUserNameError = (isError: boolean) => {
@@ -25,7 +30,7 @@ const onLoginClick = () => {
 <template>
   <Card style="width: 30em">
     <template #title>
-      <div>{{ baseStore.appName }}にログイン</div>
+      <div>{{ appName }}にログイン</div>
     </template>
     <template #content>
       <form-user-name v-model:user-name="accountStore.name" v-on:set-is-error="setUserNameError" />

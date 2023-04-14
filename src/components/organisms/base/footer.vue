@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { useBaseStore } from '@/stores/base'
+import appInfo from '@/assets/appInfo.json'
+
 interface Props {
   isLoggedIn: boolean
 }
 defineProps<Props>()
 
-const baseStore = useBaseStore()
+const appName = computed(() => {
+  return appInfo.name
+})
 
 const copyRightYear = computed((): string => {
   const beginningYear = 2022
@@ -20,7 +23,7 @@ const copyRightYear = computed((): string => {
     v-bind:class="{ 'bg-bluegray-600': !isLoggedIn, 'bg-primary-600': isLoggedIn }"
   >
     <span class="text-1xl text-white">
-      &copy;{{ copyRightYear }} <strong>{{ baseStore.appName }} Project</strong>
+      &copy;{{ copyRightYear }} <strong>{{ appName }} Project</strong>
     </span>
   </div>
 </template>

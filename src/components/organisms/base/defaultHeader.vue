@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import appLogo from '@/components/molecules/items/appLogo.vue'
 import configMenu from '@/components/organisms/card/config.vue'
-import histories from '@/assets/released.json'
+import histories from '@/assets/releaseNote.json'
 import { useBaseStore } from '@/stores/base'
 
 const baseStore = useBaseStore()
@@ -29,11 +29,7 @@ const items = ref([
     <div class="card">
       <div class="flex card-container overflow-hidden">
         <div class="flex-none flex mx-3">
-          <app-logo
-            v-bind:is-logged-in="true"
-            v-bind:app-logo="baseStore.appLogo"
-            v-bind:app-name="baseStore.appName"
-          />
+          <app-logo v-bind:is-logged-in="true" />
         </div>
         <div class="flex-grow-1 flex align-items-left">
           <Menubar class="bg-primary-200 border-none" :model="items" />

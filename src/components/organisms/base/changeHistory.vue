@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import histories from '@/assets/released.json'
+import histories from '@/assets/releaseNote.json'
 
 const releases = computed(() => {
   const dist = histories.map((e) => {

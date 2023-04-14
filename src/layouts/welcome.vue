@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import appHeader from '@/components/organisms/base/welcomeHeader.vue'
 import appFooter from '@/components/organisms/base/footer.vue'
-import histories from '@/assets/released.json'
+import histories from '@/assets/releaseNote.json'
 
 const versionInfo = computed((): string => {
   return `version ${histories[0].version} (released ${histories[0].releasedate})`
