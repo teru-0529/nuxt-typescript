@@ -2,6 +2,7 @@
 import appLogo from '@/components/molecules/items/appLogo.vue'
 import configMenu from '@/components/organisms/card/config.vue'
 import histories from '@/assets/releaseNote.json'
+import menus from '@/assets/menu.json'
 import { useBaseStore } from '@/stores/base'
 
 const baseStore = useBaseStore()
@@ -10,18 +11,9 @@ const versionInfo = computed((): string => {
   return `version ${histories[0].version} (released ${histories[0].releasedate})`
 })
 
-const items = ref([
-  {
-    label: '項目定義',
-    icon: 'pi pi-fw pi-pencil',
-    to: '/defineDomainItems',
-  },
-  {
-    label: 'DDL定義',
-    icon: 'pi pi-fw pi-pencil',
-    to: '/defineTableSchemas',
-  },
-])
+const menuInfo = computed(() => {
+  return menus
+})
 </script>
 
 <template>
@@ -32,7 +24,7 @@ const items = ref([
           <app-logo v-bind:is-logged-in="true" />
         </div>
         <div class="flex-grow-1 flex align-items-left">
-          <Menubar class="bg-primary-200 border-none" :model="items" />
+          <Menubar class="bg-primary-200 border-none" :model="menuInfo" />
         </div>
         <div class="flex-none flex align-items-center mx-3">
           <div v-if="baseStore.activeContents">
