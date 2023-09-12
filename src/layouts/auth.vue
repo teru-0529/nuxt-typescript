@@ -9,7 +9,7 @@ import appFooter from '@/components/organisms/base/footer.vue'
     <div class="bg" style="height: 610px">
       <slot />
     </div>
-    <app-footer />
+    <app-footer v-bind:is-logged-in="false" />
   </div>
 </template>
 

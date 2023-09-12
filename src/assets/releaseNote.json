@@ -1,0 +1,81 @@
+[
+  {
+    "title": "ログイン機能構築",
+    "version": "0.8.1",
+    "releasedate": "2023-04-14",
+    "note": "ログイン画面、初期画面までの遷移を構築済み。実機能は全くなし。"
+  },
+  {
+    "title": "ひな形作成",
+    "version": "0.8.0",
+    "releasedate": "2023-04-13",
+    "note": "ワイヤーフレームのみ"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.10",
+    "releasedate": "2023-04-11",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.9",
+    "releasedate": "2023-04-10",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.8",
+    "releasedate": "2023-04-09",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.7",
+    "releasedate": "2023-04-08",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.6",
+    "releasedate": "2023-04-07",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.5",
+    "releasedate": "2023-04-06",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.4",
+    "releasedate": "2023-04-05",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.3",
+    "releasedate": "2023-04-04",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.2",
+    "releasedate": "2023-04-03",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.1",
+    "releasedate": "2023-04-02",
+    "note": "Dummy"
+  },
+  {
+    "title": "Dummy",
+    "version": "0.7.0",
+    "releasedate": "2023-04-01",
+    "note": "Dummy",
+    "versionInfo": "dummy"
+  }
+]

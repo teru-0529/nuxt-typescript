@@ -1,0 +1,12 @@
+[
+  {
+    "label": "項目定義",
+    "icon": "pi pi-fw pi-pencil",
+    "to": "/defineDomainItems"
+  },
+  {
+    "label": "DDL定義",
+    "icon": "pi pi-fw pi-pencil",
+    "to": "/defineTableSchemas"
+  }
+]

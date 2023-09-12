@@ -14,14 +14,14 @@ const emit = defineEmits<Emits>()
 
 const onInput = (event: Event): void => {
   const element = event.target as HTMLInputElement
-  emit('update:user-name', element.value)
+  const value = element.value
+  emit('update:user-name', value)
 }
 
 const errMessage = ref('')
 
 const onFocusIn = (): void => {
   errMessage.value = ''
-  console.log('フォーカスイン')
 }
 
 const validate = (event: Event): void => {
@@ -29,12 +29,10 @@ const validate = (event: Event): void => {
   const value = element.value
   if (value.length < 2) {
     errMessage.value = 'ユーザー名は2文字以上必要です。'
-    emit('setIsError', true)
   } else {
-    emit('setIsError', false)
+    errMessage.value = ''
   }
-  console.log(element.value)
-  console.log('フォーカスアウト')
+  emit('setIsError', !!errMessage.value)
 }
 </script>
 

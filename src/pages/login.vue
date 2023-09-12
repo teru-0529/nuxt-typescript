@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import loginForm from '@/components/organisms/card/loginForm.vue'
 definePageMeta({
-  layout: 'login',
+  layout: 'auth',
 })
 </script>
 
