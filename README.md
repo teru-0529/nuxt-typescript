@@ -62,3 +62,7 @@ https://vee-validate.logaretm.com/v3/advanced/rules-object-expression.html#defin
 
 JavaScript 配列操作
 https://www.wakuwakubank.com/posts/280-javascript-array-helper/#index_id22
+
+ページネーター
+いろいろ書かないとできない。（テンプレートの内容で在れば行ける）
+https://primevue.org/datatable/#paginator_template

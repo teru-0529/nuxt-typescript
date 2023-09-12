@@ -21,7 +21,15 @@ const hasErrors = computed((): boolean => {
   return isUserNameError.value || false
 })
 
+onBeforeMount((): void => {
+  // ローカルストレージからアカウント名を取得
+  accountStore.prepareAccount()
+  setUserNameError(accountStore.emptyName)
+})
+
 const onLoginClick = () => {
+  // ローカルストレージにアカウント名を登録
+  accountStore.setName()
   baseStore.login()
   return navigateTo({ path: '/' })
 }
